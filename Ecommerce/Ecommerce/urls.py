@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include("Ecommapp.urls")), 
-    path('Account/',include("Account.urls")), 
-    path('Store/',include("Store.urls")), 
- 
+     path('admin/', admin.site.urls),
+    path('', include('Home.urls')),
+    path('account/', include('Account.urls')),
+    path('store/', include('Store.urls')),
+    path('cart/', include('Cart.urls')),
+    path('admin_panel/', include('Admin_panel.urls')),
+    path('payment/', include('Payment.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -13,7 +13,7 @@
           <form action="" method="POST">
             {%csrf_token%}
               <div class="form-group">
-                 <input type="email" class="form-control" placeholder="Email Address" name="email" >
+                 <input type="email" class="form-control" placeholder="Email" name="email" >
               </div> <!-- form-group// -->
               <div class="form-group">
                 <input type="password" class="form-control" placeholder="Password" name="password" >
@@ -30,7 +30,7 @@
           </div> <!-- card-body.// -->
         </div> <!-- card .// -->
     
-         <p class="text-center mt-4">Don't have account? <a href="{% url 'register' %}">Sign up</a></p>
+         <p class="text-center mt-4">Don't have account? <a href="{% url "register" %}">Sign up</a></p>
          <br><br>
 
     

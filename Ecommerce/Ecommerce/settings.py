@@ -152,7 +152,6 @@ AUTH_USER_MODEL = 'Account.User'
 
 RAZOR_KEY_ID = os.getenv('RAZOR_KEY_ID')
 RAZOR_KEY_SECRET = os.getenv('RAZOR_KEY_SECRET')
-client = razorpay.Client(auth=('rzp_test_WMKKt2Iww3vC9k', 'eOtrpSH1Y9Z3INB0ULRuqNYn'))
 
 # For Email
 

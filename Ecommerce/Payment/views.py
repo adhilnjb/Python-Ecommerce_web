@@ -61,7 +61,7 @@ def checkout(request):
 
     orders = Order.objects.filter(user=user, cart_item__cart__user=user)
 
-    client = razorpay.Client(auth=('rzp_test_WMKKt2Iww3vC9k', 'eOtrpSH1Y9Z3INB0ULRuqNYn'))
+    client = razorpay.Client(auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET))
 
     data = {"amount": total_amount, "currency": "INR", "payment_capture": 1}
 

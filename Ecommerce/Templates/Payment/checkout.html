@@ -90,10 +90,10 @@
 
 <script>
     var options = {
-        "key": "{{ Rrzp_test_WMKKt2Iww3vC9k }}", // Use your key from settings
+        "key": "{{ settings.RAZOR_KEY_ID }}", // Use your key from settings
         "amount": "{{ payment.amount }}",
         "currency": "INR",
-        "name": "E-commercial",
+        "name": "E-commerce",
         "order_id": "{{ payment.id }}",
         "handler": function (response) {
             window.location.href = `/payment/success/?razorpay_payment_id=${response.razorpay_payment_id}&razorpay_order_id=${response.razorpay_order_id}&razorpay_signature=${response.razorpay_signature}`; // Use relative URL
